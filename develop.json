@@ -1,0 +1,19 @@
+{
+    "name": "Micheal Weaver",
+    "logo_name": "micheal-weaver",
+    "role": "Front-end developer",
+    "about": {
+        "sections": {
+            "professional-info": {
+                "title": "professional-info",
+                "icon": "icons/info-professional.svg",
+                "info": {
+                    "experience": {
+                        "title": "experience",
+                        "description": "pariatur."
+                    }
+                }
+            }
+        }
+    }
+}
