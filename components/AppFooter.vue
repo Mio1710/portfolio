@@ -19,7 +19,7 @@
           <img src="/pwa/icons/social/twitter.svg" />
         </NuxtLink>
         <NuxtLink
-          :to="social.facebook.url + social.facebook.user"
+          to="https://www.facebook.com/Mio1710"
           target="_blank"
           class="flex justify-center items-center"
         >
@@ -37,11 +37,11 @@
 
     <!-- github user -->
     <NuxtLink
-      :to="social.github.url + social.github.user"
+      :to="social.github.url + 'mio1710'"
       target="_blank"
       class="hidden md:flex items-center px-5 border-left"
     >
-      @{{ social.github.user }}
+      @mio1710
       <img src="/pwa/icons/social/github.svg" />
     </NuxtLink>
   </footer>

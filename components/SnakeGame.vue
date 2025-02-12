@@ -1,28 +1,39 @@
 <template>
-  <div id="console">
-    <!-- Game Screen -->
-    <div id="game-screen" ref="gameScreen" class="position-relative">
-      
-      <img
-        alt="Avatar"
-        src="/images/i3.jpg"
-        class="object-top first-image object-cover w-[60%] h-[60%] position-absolute right-0 bottom-0"
-      ></img>
-      <!-- <v-avatar> -->
-      <img
-        alt="Avatar"
-        src="/images/i1.jpg"
-        class="object-bottom first-image object-cover w-[70%] h-[70%] position-relative"
-      ></img>
-      <!-- </v-avatar> -->
+  <div class="position-relative">
+    <div id="console" class="top-8 position-relative">
+      <!-- Game Screen -->
+      <div id="game-screen" ref="gameScreen">
+        <v-img
+          alt="Avatar"
+          height="250"
+          src="/images/i2.jpg"
+          class="object-top object-cover h-full w-full"
+          cover
+        ></v-img>
+      </div>
+    </div>
+    <div id="console" class="left-1/4 bottom-8 position-relative">
+      <!-- Game Screen -->
+      <div id="game-screen" ref="gameScreen">
+        <!-- <v-avatar> -->
+        <v-img
+          alt="Avatar"
+          src="/images/i1.jpg"
+          height="250"
+          class="h-full w-full"
+          cover
+          position="bottom"
+        ></v-img>
+        <!-- </v-avatar> -->
+      </div>
     </div>
   </div>
 </template>
 
 <style>
 #console {
-  width: 420px;
-  height: 370px;
+  width: 40%;
+  height: 50%;
   padding: 24px;
   border: 1px solid black;
   display: flex;
@@ -34,7 +45,6 @@
     rgba(67, 217, 173, 0.13)
   );
   border-radius: 10px;
-  position: relative;
 }
 
 #game-screen {
@@ -47,11 +57,5 @@
 
 #console-menu {
   height: 400px;
-}
-
-.first-image img {
-  width: 70%;
-  height: 70%;
-  object-position: bottom;
 }
 </style>

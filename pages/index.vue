@@ -35,9 +35,7 @@
               'config.public.public.dev.contacts.social.github.user'
             "
           >
-            "https://github.com/{{
-              "config.public.public.dev.contacts.social.github.user"
-            }}"
+            "https://github.com/mio1710"
           </a>
         </p>
       </div>
