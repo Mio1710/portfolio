@@ -12,11 +12,11 @@
       </span>
       <div id="social-icons" class="flex">
         <NuxtLink
-          :to="social.twitter.url + social.twitter.user"
+          to="https://www.linkedin.com/in/nguyen-thi-le/"
           target="_blank"
           class="flex justify-center items-center"
         >
-          <img src="/pwa/icons/social/twitter.svg" />
+          <v-icon>mdi-linkedin</v-icon>
         </NuxtLink>
         <NuxtLink
           to="https://www.facebook.com/Mio1710"

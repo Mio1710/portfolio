@@ -3,26 +3,30 @@
     <nav class="w-full flex justify-between border-bot">
       <github-corner url="https://github.com/Mio1710/portfolio" />
       <div class="flex">
-        <NuxtLink id="nav-logo" to="/">
+        <NuxtLink id="nav-logo" to="#intro">
           {{ config.public.dev.logo_name }}
         </NuxtLink>
 
-        <NuxtLink id="nav-link" to="/" :class="{ active: isActive('/') }">
+        <NuxtLink
+          id="nav-link"
+          :to="{ hash: '#intro' }"
+          :external="!isActive('#intro')"
+        >
           _hello
         </NuxtLink>
 
         <NuxtLink
           id="nav-link"
-          to="/about-me"
-          :class="{ active: isActive('/about-me') }"
+          to="/#about-me"
+          :external="!isActive('#about-me')"
         >
           _about-me
         </NuxtLink>
 
         <NuxtLink
           id="nav-link"
-          to="/projects"
-          :class="{ active: isActive('/projects') }"
+          to="/#projects"
+          :external="!isActive('#projects')"
         >
           _projects
         </NuxtLink>
@@ -30,8 +34,8 @@
 
       <NuxtLink
         id="nav-link-contact"
-        to="/contact-me"
-        :class="{ active: isActive('/contact-me') }"
+        to="#contact-me"
+        :class="{ active: false }"
       >
         _contact-me
       </NuxtLink>
@@ -49,7 +53,15 @@ export default {
   computed: {
     // Set active class to current page link
     isActive() {
-      return (route) => this.$route.path === route;
+      return (route) => {
+        console.log(
+          "check hash",
+          this.$route.hash,
+          route,
+          this.$route.hash === route
+        );
+        return this.$route.hash === route;
+      };
     },
   },
   setup() {
