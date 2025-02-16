@@ -54,12 +54,6 @@ export default {
     // Set active class to current page link
     isActive() {
       return (route) => {
-        console.log(
-          "check hash",
-          this.$route.hash,
-          route,
-          this.$route.hash === route
-        );
         return this.$route.hash === route;
       };
     },

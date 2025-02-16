@@ -1,4 +1,6 @@
 <template>
+  <div class="css-blurry-gradient-blue"></div>
+  <div class="css-blurry-gradient-green"></div>
   <section class="hero">
     <div class="head">
       <span> Hi all, I am </span>
@@ -12,9 +14,21 @@
     </div>
 
     <div id="info">
-      <span class="action"> // complete the game to continue </span>
-      <span :class="{ hide: isMobile }">
-        // you can also see it on my Github page
+      <span>With more then 3+ years of experience in Web Developer,</span>
+      <span>
+        I work well with some tools like
+        <span class="important-word">NestJS</span>,
+        <span class="important-word">NuxtJS </span>and
+        <span class="important-word">Laravel</span>.
+      </span>
+      <span>
+        I also familiar with some AWS cloud services like
+        <span class="important-word">EC2</span>,
+        <span class="important-word">S3</span>,
+        <span class="important-word">SQS</span>,
+        <span class="important-word">SNS</span>,
+        <span class="important-word">RDS</span> and
+        <span class="important-word">Lamda</span>.
       </span>
       <span :class="{ hide: !isMobile }"> // find my profile on Github: </span>
       <p class="code">
@@ -31,6 +45,15 @@
           "https://github.com/mio1710"
         </a>
       </p>
+      <div class="mt-[40px] text-center">
+        <v-btn
+          variant="outlined"
+          color="primary"
+          href="#contact-me"
+          @onHover="console.log('hovered')"
+          >Contact me</v-btn
+        >
+      </div>
     </div>
   </section>
 
@@ -44,12 +67,16 @@ const config = useRuntimeConfig();
 </script>
 
 <style scoped>
+.important-word {
+  color: #43d9ad;
+  font-weight: bold;
+}
 #hello {
   display: flex;
   height: 100%;
   width: 100%;
   flex: 1 1 auto;
-  padding-left: 275px;
+  padding: 0 250px;
   overflow: hidden;
 }
 .hero {
@@ -105,10 +132,10 @@ const config = useRuntimeConfig();
 
 #info > span {
   font-size: 14px;
-  line-height: 1;
   color: #607b96;
   font-family: "Fira Code Retina";
   padding-bottom: 1rem; /* 16px */
+  padding-right: 1rem;
 }
 
 .code {
@@ -134,10 +161,6 @@ const config = useRuntimeConfig();
   text-underline-offset: 4px;
 }
 
-#info {
-  padding-block: 2.5rem;
-}
-
 #info .action {
   display: flex;
 }
@@ -147,7 +170,7 @@ const config = useRuntimeConfig();
 }
 
 .css-blurry-gradient-blue {
-  position: fixed;
+  position: absolute;
   bottom: 25%;
   right: 5%;
   width: 300px;
@@ -179,6 +202,28 @@ const config = useRuntimeConfig();
   );
   opacity: 0.5;
   z-index: 10;
+}
+.css-blurry-gradient-blue {
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  opacity: 0.7;
+  border-radius: 100% 50% 100% 0%;
+}
+
+.css-blurry-gradient-green {
+  position: absolute;
+  top: 10%;
+  right: 35%;
+  filter: blur(100px);
+  rotate: 10deg;
+  width: 400px;
+  height: 400px;
+  opacity: 0.5;
+  border-radius: 100% 0% 0% 0%;
+  rotate: 20deg;
 }
 
 #info {
@@ -242,55 +287,6 @@ const config = useRuntimeConfig();
 
   #info .action {
     display: none;
-  }
-}
-
-/* tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-  #hello {
-    padding-left: 0;
-  }
-  #hello .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1.75rem; /* 28px */
-  }
-  .head {
-    padding-top: 4rem; /* 40px */
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1320px) {
-  #hello {
-    padding-left: 135px;
-  }
-}
-
-/* LG */
-
-@media (min-width: 1024px) {
-  .css-blurry-gradient-blue {
-    position: fixed;
-    bottom: 10%;
-    right: 10%;
-    width: 500px;
-    height: 500px;
-    opacity: 0.7;
-    border-radius: 100% 50% 100% 0%;
-  }
-
-  .css-blurry-gradient-green {
-    position: fixed;
-    top: 10%;
-    right: 35%;
-    filter: blur(100px);
-    rotate: 10deg;
-    width: 400px;
-    height: 400px;
-    opacity: 0.5;
-    border-radius: 100% 0% 0% 0%;
-    rotate: 20deg;
   }
 }
 

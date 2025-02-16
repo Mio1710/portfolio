@@ -32,7 +32,7 @@
 
 <style>
 #console {
-  width: 40%;
+  width: 50%;
   height: 50%;
   padding: 24px;
   border: 1px solid black;

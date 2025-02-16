@@ -1,9 +1,5 @@
 <template>
   <main class="flex flex-col flex-auto lg:flex-row overflow-hidden">
-    <div id="mobile-page-title">
-      <h2>_projects</h2>
-    </div>
-
     <!-- section title (mobile) -->
     <div
       id="section-content-title"

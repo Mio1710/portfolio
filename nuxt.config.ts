@@ -51,6 +51,7 @@ export default defineNuxtConfig({
       });
     },
     "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
   ],
   build: { transpile: ["vuetify"] },
   tailwindcss: {
